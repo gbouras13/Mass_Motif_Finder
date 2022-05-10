@@ -22,13 +22,13 @@ def get_motif(motif_seq, fasta_in, out_file):
 	# go the fwd first
 	for i in range(len(reads)):
 		for pos, seq in m.instances.search(reads[i].seq):
-			l = [(i+1),pos, seq ]
+			l = [reads[i].id,pos, seq ]
 			summary.append(l)
 
 	# then rev
 	for i in range(len(reads)):
 		for pos, seq in m_rev.instances.search(reads[i].seq):
-			l = [(i+1),pos, seq ]
+			l = [reads[i].id,pos, seq ]
 			summary.append(l)
 
     # make into combined dataframe
