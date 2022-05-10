@@ -13,6 +13,7 @@ else:
 
 ### OUTPUT DIRs
 FLAGS = os.path.join(OUTPUT, 'FLAGS')
+TMP = os.path.join(OUTPUT, 'TMP')
 RESULTS = os.path.join(OUTPUT, 'RESULTS')
 SUMMARY = os.path.join(OUTPUT, 'SUMMARY')
 
