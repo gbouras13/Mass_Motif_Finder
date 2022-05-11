@@ -76,10 +76,10 @@ def get_gff_gene(csv_in, gff_in, csv_out, sample):
                 motif_df['Uniprot'].iloc[i] = "hypothetical protein"
             else:
                 motif_df['Uniprot'].iloc[i] = selected_row_df['Uniprot'].iloc[0]
-            if selected_row_df['gene'].iloc[0] == "":
+            if selected_row_df['Gene_Name'].iloc[0] == "":
                 motif_df['gene'].iloc[i] = "hypothetical protein"
             else:
-                motif_df['gene'].iloc[i] = selected_row_df['gene'].iloc[0]
+                motif_df['gene'].iloc[i] = selected_row_df['Gene_Name'].iloc[0]
             
 
     # # write to csv
