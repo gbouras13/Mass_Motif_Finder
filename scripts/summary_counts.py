@@ -34,7 +34,7 @@ def summarise_sample(summary_list, count_out, gene_out, summary_all_out):
 
     # count each gene
 
-    gene_df = (total_summary_df.groupby(['gene','product','uniprot'])
+    gene_df = (total_summary_df.groupby(['gene','product','Uniprot'])
         .agg({'contig':'size'})
         .rename(columns={'contig':'Number_Motif_Hits'})
         .reset_index())
