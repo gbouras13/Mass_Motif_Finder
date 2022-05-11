@@ -38,7 +38,7 @@ def get_gff_gene(csv_in, gff_in, csv_out, sample):
     motif_df['locus_tag'] = "Non-Coding"
     motif_df['gene'] = "Non-Coding"
     motif_df['product'] = "Non-Coding"
-    motif_df['Uniprot'] = "No-Uniprot"
+    motif_df['Uniprot'] = "Non-Coding"
     motif_df['sample'] = sample
     # https://stackoverflow.com/questions/13148429/how-to-change-the-order-of-dataframe-columns
     cols = motif_df.columns.tolist()
