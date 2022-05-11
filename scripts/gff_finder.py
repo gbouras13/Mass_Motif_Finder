@@ -72,7 +72,8 @@ def get_gff_gene(csv_in, gff_in, csv_out, sample):
             motif_df['locus_tag'].iloc[i] = selected_row_df['locus_tag'].iloc[0]
             motif_df['gene'].iloc[i] = selected_row_df['Gene_Name'].iloc[0]
             motif_df['product'].iloc[i] = selected_row_df['product'].iloc[0]
-            motif_df['Uniprot'].iloc[i] = selected_row_df['Uniprot'].iloc[0]
+            if selected_row_df['Uniprot'].iloc[0] != "":
+                motif_df['Uniprot'].iloc[i] = selected_row_df['Uniprot'].iloc[0]
             
 
     # # write to csv
