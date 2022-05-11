@@ -70,10 +70,16 @@ def get_gff_gene(csv_in, gff_in, csv_out, sample):
             selected_row_df['Uniprot'] = selected_row_df['description'].apply(lambda x: find_between(x,"UniProtKB:", ";"  ) )
             selected_row_df[['description','product']] = selected_row_df['description'].str.split('product=',expand=True)
             motif_df['locus_tag'].iloc[i] = selected_row_df['locus_tag'].iloc[0]
-            motif_df['gene'].iloc[i] = selected_row_df['Gene_Name'].iloc[0]
             motif_df['product'].iloc[i] = selected_row_df['product'].iloc[0]
-            if selected_row_df['Uniprot'].iloc[0] != "":
+            # for hyp proteins
+            if selected_row_df['Uniprot'].iloc[0] == "":
+                motif_df['Uniprot'].iloc[i] = "hypothetical protein"
+            else:
                 motif_df['Uniprot'].iloc[i] = selected_row_df['Uniprot'].iloc[0]
+            if selected_row_df['gene'].iloc[0] == "":
+                motif_df['gene'].iloc[i] = "hypothetical protein"
+            else:
+                motif_df['gene'].iloc[i] = selected_row_df['gene'].iloc[0]
             
 
     # # write to csv
