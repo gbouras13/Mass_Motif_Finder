@@ -9,7 +9,7 @@ rule prokka:
     conda:
         os.path.join('..', 'envs','prokka.yaml')
     threads:
-        BigJobCpu
+        1
     resources:
         mem_mb=BigJobMem
     shell:
