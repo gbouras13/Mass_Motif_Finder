@@ -14,6 +14,7 @@ else:
 ### OUTPUT DIRs
 FLAGS = os.path.join(OUTPUT, 'FLAGS')
 TMP = os.path.join(OUTPUT, 'TMP')
+PROKKA = os.path.join(TMP, 'PROKKA')
 RESULTS = os.path.join(OUTPUT, 'RESULTS')
 SUMMARY = os.path.join(OUTPUT, 'SUMMARY')
 

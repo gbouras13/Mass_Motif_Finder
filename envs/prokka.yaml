@@ -1,8 +1,7 @@
-name: medaka
+name: assemble
 channels:
     - conda-forge
     - bioconda
     - defaults
 dependencies:
-    - medaka
-    - chardet
+    - prokka

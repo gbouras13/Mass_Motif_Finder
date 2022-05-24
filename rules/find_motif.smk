@@ -18,7 +18,7 @@ rule find_motif:
 rule add_gene_from_gff:
     input:
         csv = os.path.join(TMP,"{sample}.csv"),
-        gff = os.path.join(GFFS,"{sample}.gff")
+        gff = os.path.join(PROKKA,"{sample}","{sample}.gff")
     output:
         csv = os.path.join(RESULTS,"{sample}.csv")
     params:
