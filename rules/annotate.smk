@@ -12,7 +12,7 @@ rule prokka:
         BigJobCpu
     resources:
         mem_mb=BigJobMem
-    script:
+    shell:
         'prokka --outdir {params[0]}  --prefix {wildcards.sample} {input[0]} --force'
 
 
