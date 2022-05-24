@@ -9,11 +9,11 @@ rule prokka:
     conda:
         os.path.join('..', 'envs','prokka.yaml')
     threads:
-        1
+        BigJobCpu
     resources:
         mem_mb=BigJobMem
     shell:
-        'prokka --outdir {params[0]}  --prefix {wildcards.sample} {input[0]} --force'
+        'prokka --outdir {params[0]} -cpus {threads}  --prefix {wildcards.sample} {input[0]} --force'
 
 
 
