@@ -24,7 +24,7 @@ cd $SNK_DIR
 module load Anaconda3/2020.07
 conda activate snakemake_clean_env
 
- snakemake -c 1 -s runner.smk --use-conda --config Fastas='/hpcfs/users/a1667917/s_aureus/e_coli_fasta' \
+ snakemake -c 1 -s runner.smk --use-conda --profile $PROF_DIR/bact_assembly  --config Fastas='/hpcfs/users/a1667917/s_aureus/e_coli_fasta' \
  Output=/hpcfs/users/a1667917/s_aureus/e_coli_motif Motif='AGCGCAAGTA' --conda-frontend conda 
 
 
